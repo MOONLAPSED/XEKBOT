@@ -1,0 +1,126 @@
+{
+  "main": {
+    "id": "2f698ca9c627ce0c",
+    "type": "split",
+    "children": [
+      {
+        "id": "cde0b268db8d0fd8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "550d408d7b09d5cf",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d2fb9d8f48f6df27",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4a2d67afc363cec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a15bf93d90e7be99",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2d7c82f688854f64",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "[\"excalidraw-mask\"]",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "84b722caac1db7e2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0b19e0e3259dc245",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "zk-prefixer:Create new unique note": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "550d408d7b09d5cf",
+  "lastOpenFiles": [
+    "kb/kb/kb/kb/kb/assets/pub",
+    "kb/kb/kb/kb/kb/pub",
+    "kb/kb/kb/kb/kb/assets",
+    "kb/kb/kb/kb/kb",
+    "kb/kb/kb/kb/assets/pub",
+    "kb/kb/kb/kb/pub",
+    "kb/kb/kb/kb/assets",
+    "kb/kb/kb/kb",
+    "kb/kb/kb/assets/pub",
+    "kb/kb/kb/pub",
+    "kb/kb/kb/assets",
+    "README.md",
+    "kb/2024-10-31.md",
+    "kb/callback pattern.md",
+    "kb/2024-10-31 1.md",
+    "2024-10-30.md",
+    "image.jpg",
+    "callback pattern.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "Welcome.md"
+  ]
+}
