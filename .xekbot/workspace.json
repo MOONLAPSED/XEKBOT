@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cde0b268db8d0fd8",
+        "id": "8cfde2690ceff86e",
         "type": "tabs",
         "children": [
           {
-            "id": "550d408d7b09d5cf",
+            "id": "b40034295e58f76c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kb/pub/callback pattern.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "callback pattern"
+              "title": "New tab"
             }
           }
         ]
@@ -183,11 +178,27 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "550d408d7b09d5cf",
+  "active": "b40034295e58f76c",
   "lastOpenFiles": [
-    "2024-10-31.md",
+    "memory_tracker.log",
+    "app/subenforcer.py",
+    "kb/pub/memoization.md",
+    "kb/pub/monoid.md",
     "kb/pub/callback pattern.md",
-    "kb/pub/assets",
+    "app/Enforcer.py",
+    "app/source/assets/pub",
+    "app/source/README.md",
+    "app/source/assets",
+    "app/source",
+    "app/assets/pub",
+    "app/assets",
+    "app/src/assets/pub",
+    "app/src/assets",
+    "app/src/source/assets/pub",
+    "app/README.md",
+    "app/src/source/README.md",
+    "app/src/README.md",
+    "2024-10-31.md",
     "kb/pub/assets/image.jpg",
     "kb/pub/2024-10-31 1.md",
     "README.md",

@@ -1,52 +1,227 @@
-# One-To-Many Pattern (Observer Pattern)
+# Callback Pattern
 
-## Overview
-The **One-To-Many Pattern**, also known as the **Observer Pattern**, is a design pattern that allows an object (the subject) to maintain a list of its dependents (observers) and notify them automatically of any state changes. This pattern promotes decoupling between the subject and its observers, achieving separation of concerns.
+## Core Concepts
+- **Alternative Names**: Observer Pattern, One-to-Many Pattern, Publish-Subscribe Pattern
+- **Category**: Behavioral Design Pattern
+- **Mathematical Concept**: Monoid (composition of functions)
+- **Key Property**: Decoupled Communication
 
-## Key Concepts
+## Foundational Definition
+A pattern where an object (subject) maintains a collection of dependent functions or objects (observers) and invokes them when its state changes or events occur.
 
-- **Subject**: The object being observed. It maintains a list of observers and notifies them of changes.
-- **Observers**: The objects that are interested in changes to the subject. They respond to events or changes in the subject's state.
-- **Decoupling**: By using this pattern, the subject does not need to know details about the observers, which enhances modularity and flexibility.
+## Components
+1. **Subject** (Publisher/Observable)
+   - Maintains collection of callbacks
+   - Provides registration interface
+   - Notifies observers of state changes
+   - Does not know observer implementation details
 
-## How It Works
+2. **Observer** (Subscriber/Callback)
+   - Implements update mechanism
+   - Registers with subject
+   - Responds to notifications
+   - Can observe multiple subjects
 
-1. **Maintain a List of Callbacks**: The subject maintains a list of observers (callbacks) that are interested in its state changes.
-2. **Notify Observers**: When a change occurs in the subject, it notifies all registered observers, allowing them to respond accordingly.
+3. **Registration Mechanism**
+   - Add/remove observers
+   - Store observer references
+   - Handle cleanup of dead references
 
-## Example in Python
+4. **Notification Protocol**
+   - Define how updates are sent
+   - Specify data passed to observers
+   - Determine notification timing
 
-Here's a simple implementation of the Observer Pattern in Python:
+## Implementation Patterns
 
+### Basic Implementation
 ```python
+from typing import Protocol, List
+from weakref import WeakSet
+
+class Observer(Protocol):
+    def update(self, message: str) -> None: ...
+
 class Subject:
-    def __init__(self):
-        self._observers = []
-
-    def register_observer(self, observer):
-        self._observers.append(observer)
-
-    def unregister_observer(self, observer):
-        self._observers.remove(observer)
-
-    def notify_observers(self, message):
+    def __init__(self) -> None:
+        # WeakSet prevents memory leaks
+        self._observers: WeakSet = WeakSet()
+    
+    def attach(self, observer: Observer) -> None:
+        self._observers.add(observer)
+    
+    def detach(self, observer: Observer) -> None:
+        self._observers.discard(observer)
+    
+    def notify(self, message: str) -> None:
         for observer in self._observers:
             observer.update(message)
+```
 
+### Function-Based Implementation
+```python
+from typing import Callable, Set
+from dataclasses import dataclass, field
 
-class Observer:
-    def update(self, message):
-        print(f"Received message: {message}")
-
-
-# Example usage
-if __name__ == "__main__":
-    subject = Subject()
+@dataclass
+class EventEmitter:
+    _callbacks: Set[Callable[[str], None]] = field(default_factory=set)
     
-    observer1 = Observer()
-    observer2 = Observer()
+    def on(self, callback: Callable[[str], None]) -> None:
+        self._callbacks.add(callback)
+    
+    def off(self, callback: Callable[[str], None]) -> None:
+        self._callbacks.discard(callback)
+    
+    def emit(self, message: str) -> None:
+        for callback in self._callbacks:
+            callback(message)
+```
 
-    subject.register_observer(observer1)
-    subject.register_observer(observer2)
+## Common Use Cases
+1. **Event Handling**
+   - GUI applications
+   - User input processing
+   - System event monitoring
 
-    subject.notify_observers("Hello, Observers!")
+2. **State Change Propagation**
+   - Model-View-Controller pattern
+   - Data binding
+   - Cache invalidation
+
+3. **Asynchronous Operations**
+   - Progress updates
+   - Completion notifications
+   - Error handling
+
+## Behavioral Properties
+1. **One-to-Many Relationship**
+   - Single subject, multiple observers
+   - Fan-out notification pattern
+   - Dynamic observer registration
+
+2. **Loose Coupling**
+   - Subject doesn't know observer details
+   - Observers can be added/removed at runtime
+   - Independent evolution of components
+
+3. **Composability**
+   - Observers can be chained
+   - Multiple subjects can share observers
+   - Hierarchical observation patterns
+
+## Implementation Considerations
+
+### Memory Management
+1. **Reference Handling**
+   - Use weak references to prevent memory leaks
+   - Implement cleanup mechanisms
+   - Handle observer lifetime
+
+2. **Performance**
+   - Consider notification overhead
+   - Batch updates when possible
+   - Implement priority mechanisms
+
+3. **Thread Safety**
+   - Synchronize observer collection access
+   - Handle concurrent notifications
+   - Protect shared state
+
+### Common Pitfalls
+1. **Circular References**
+   - Observer holding subject reference
+   - Mutual observation cycles
+   - Memory leak potential
+
+2. **Update Loops**
+   - Infinite notification chains
+   - Recursive updates
+   - State inconsistency
+
+3. **Resource Management**
+   - Unregistered observers
+   - Dangling references
+   - Resource cleanup
+
+## Related Patterns
+1. **Mediator Pattern**
+   - Centralized communication
+   - Many-to-many relationships
+   - Event coordination
+
+2. **Command Pattern**
+   - Encapsulated operations
+   - Queued execution
+   - Undo/redo capability
+
+3. **Chain of Responsibility**
+   - Sequential processing
+   - Request handling
+   - Filter chains
+
+## Mathematical Foundation
+1. **Monoid Properties**
+   - Associativity: (a • b) • c = a • (b • c)
+   - Identity element: e • a = a • e = a
+   - Closure: a • b is defined for all a, b
+
+2. **Function Composition**
+   ```python
+   def compose(f, g):
+       return lambda x: f(g(x))
+   ```
+
+## Testing Strategies
+1. **Unit Tests**
+   - Observer registration
+   - Notification delivery
+   - State consistency
+
+2. **Integration Tests**
+   - Multiple observer interaction
+   - Event propagation
+   - Error handling
+
+3. **Performance Tests**
+   - Notification scalability
+   - Memory usage
+   - Update latency
+
+## Code Examples
+
+### Type-Safe Implementation
+```python
+from typing import Generic, TypeVar, Protocol, Set
+from dataclasses import dataclass, field
+
+T = TypeVar('T')
+
+class Observer(Protocol, Generic[T]):
+    def on_update(self, data: T) -> None: ...
+
+@dataclass
+class TypedSubject(Generic[T]):
+    observers: Set[Observer[T]] = field(default_factory=set)
+    
+    def attach(self, observer: Observer[T]) -> None:
+        self.observers.add(observer)
+    
+    def notify(self, data: T) -> None:
+        for observer in self.observers:
+            observer.on_update(data)
+```
+
+## References
+- [[design patterns]]
+- [[event handling]]
+- [[functional programming]]
+- [[memory management]]
+- [[concurrency patterns]]
+
+## Meta Information
+- **Pattern Category**: Behavioral
+- **Difficulty Level**: Intermediate
+- **Implementation Complexity**: Medium
+- **Usage Frequency**: Very High
+- **Language Agnostic**: Yes
