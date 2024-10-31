@@ -11,10 +11,15 @@
             "id": "550d408d7b09d5cf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "kb/pub/callback pattern.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "callback pattern"
             }
           }
         ]
@@ -78,7 +83,86 @@
   "right": {
     "id": "0b19e0e3259dc245",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "8641f2ddd515973e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65865d1591b77963",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2024-10-31.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2024-10-31"
+            }
+          },
+          {
+            "id": "6988747b969853a2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2024-10-31.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-10-31"
+            }
+          },
+          {
+            "id": "213ac5308d6fc06a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "78bc5e585d4cb131",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8fe3c03ab194ec9b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2024-10-31.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2024-10-31"
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
@@ -101,26 +185,12 @@
   },
   "active": "550d408d7b09d5cf",
   "lastOpenFiles": [
-    "kb/kb/kb/kb/kb/assets/pub",
-    "kb/kb/kb/kb/kb/pub",
-    "kb/kb/kb/kb/kb/assets",
-    "kb/kb/kb/kb/kb",
-    "kb/kb/kb/kb/assets/pub",
-    "kb/kb/kb/kb/pub",
-    "kb/kb/kb/kb/assets",
-    "kb/kb/kb/kb",
-    "kb/kb/kb/assets/pub",
-    "kb/kb/kb/pub",
-    "kb/kb/kb/assets",
+    "2024-10-31.md",
+    "kb/pub/callback pattern.md",
+    "kb/pub/assets",
+    "kb/pub/assets/image.jpg",
+    "kb/pub/2024-10-31 1.md",
     "README.md",
-    "kb/2024-10-31.md",
-    "kb/callback pattern.md",
-    "kb/2024-10-31 1.md",
-    "2024-10-30.md",
-    "image.jpg",
-    "callback pattern.md",
-    "Untitled.md",
-    "Untitled 1.md",
-    "Welcome.md"
+    "callback pattern.md"
   ]
 }
