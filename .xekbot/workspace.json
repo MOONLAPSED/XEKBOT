@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8cfde2690ceff86e",
+        "id": "e9b8cc77a0ec09d3",
         "type": "tabs",
         "children": [
           {
-            "id": "b40034295e58f76c",
+            "id": "61e4fcedcf238387",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -178,11 +178,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b40034295e58f76c",
+  "active": "61e4fcedcf238387",
   "lastOpenFiles": [
+    "kb/pub/MSC convenes with KEK.md",
+    "kb/MSC convenes with KEK.md",
+    "kb/1031logicpretty.md",
+    "kb/2024-10-31.md",
+    "kb/pub/memoization.md",
     "memory_tracker.log",
     "app/subenforcer.py",
-    "kb/pub/memoization.md",
     "kb/pub/monoid.md",
     "kb/pub/callback pattern.md",
     "app/Enforcer.py",
@@ -194,7 +198,6 @@
     "app/assets",
     "app/src/assets/pub",
     "app/src/assets",
-    "app/src/source/assets/pub",
     "app/README.md",
     "app/src/source/README.md",
     "app/src/README.md",
