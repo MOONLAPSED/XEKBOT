@@ -1,0 +1,27 @@
+{
+  "showPlaceholder": true,
+  "cmdsSorting": [
+    "insert-text",
+    "insert-note-callout",
+    "insert-heading1",
+    "insert-heading2",
+    "insert-heading3",
+    "insert-heading4",
+    "insert-heading5",
+    "insert-heading6",
+    "insert-tag",
+    "insert-math",
+    "insert-quote",
+    "insert-embed",
+    "bookmark",
+    "insert-todo",
+    "insert-bulletList",
+    "insert-numberList",
+    "insert-code",
+    "insert-divide",
+    "insert-table",
+    "insert-success-callout",
+    "insert-todo-callout"
+  ],
+  "disableSelectionMenu": false
+}

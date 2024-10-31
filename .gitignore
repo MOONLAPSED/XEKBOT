@@ -1,2 +1,23 @@
+# Automated rules - DO NOT MODIFY
+
+# private
+
 /assets/*
+/kb/*
+/kb/assets/*
+
+# public
+
 !/assets/pub/
+!/kb/pub/
+!/kb/assets/pub/*
+
+### END AUTOMATED SECTION ###
+
+# uncategorized
+/.xokbot/workspace.json
+
+# User-defined rules below
+node_modules/
+*.log
+/.scratch/*

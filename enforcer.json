@@ -1,0 +1,57 @@
+{
+    "base_dir": ".",
+    "directory_structure": {
+      "enabled": true,
+      "level": "ERROR",
+      "paths": [
+        "assets/pub",
+        "kb/assets/pub",
+        "kb/pub"
+      ]
+    },
+    "gitignore": {
+      "enabled": true,
+      "level": "ERROR",
+      "patterns": {
+        "private": [
+          "/assets/*",
+          "/kb/*",
+          "/kb/assets/*"
+        ],
+        "public": [
+          "!/assets/pub/",
+          "!/kb/pub/",
+          "!/kb/assets/pub/*"
+        ]
+      }
+    },
+    "ruff": {
+      "enabled": false,
+      "level": "WARNING"
+    },
+    "hooks": {
+      "enabled": true,
+      "pre_commit": [
+        "enforcer.py --check"
+      ],
+      "pre_push": [
+        "enforcer.py --check"
+      ]
+    },
+    "custom_rules": {
+      "type_check": {
+        "enabled": false,
+        "level": "WARNING",
+        "check_command": "mypy .",
+        "fix_command": null,
+        "success_exit_codes": [0]
+      },
+      "format_check": {
+        "enabled": false,
+        "level": "WARNING",
+        "check_command": "black --check .",
+        "fix_command": "black .",
+        "success_exit_codes": [0]
+      }
+    }
+  }
