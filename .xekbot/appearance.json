@@ -1,6 +1,11 @@
 {
   "cssTheme": "Terminal",
-  "interfaceFontFamily": "Fira Code",
-  "textFontFamily": "Fira Code",
-  "monospaceFontFamily": "FiraMono Nerd Font Mono"
+  "interfaceFontFamily": "Fira Code Retina",
+  "textFontFamily": "Fira Code Retina",
+  "monospaceFontFamily": "FiraMono Nerd Font Mono",
+  "baseFontSizeAction": true,
+  "theme": "obsidian",
+  "accentColor": "#000000",
+  "baseFontSize": 14,
+  "nativeMenus": false
 }
