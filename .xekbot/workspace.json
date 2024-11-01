@@ -4,37 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "28d3bd438be93009",
+        "id": "1ee1fb64a1d2b0fc",
         "type": "tabs",
         "children": [
           {
-            "id": "812f4a3578029efe",
+            "id": "37ed30ad354d4957",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kb/pub/multiple_inheritance/pub/MRO.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "MRO"
-            }
-          },
-          {
-            "id": "3f62abeb30b60ae3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kb/pub/multiple_inheritance/pub/MRO.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MRO"
+              "title": "New tab"
             }
           }
         ]
@@ -159,8 +139,8 @@
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-archive",
-              "title": "All properties"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -184,26 +164,31 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "zk-prefixer:Create new unique note": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "812f4a3578029efe",
+  "active": "37ed30ad354d4957",
   "lastOpenFiles": [
+    "kb/2024Nov01.md",
+    "2024-11-01.md",
+    "kb/2024-10-31.md",
+    "app/README.md",
+    "kb/pub/multiple_inheritance/pub/MRO.md",
+    "kb/pub/multiple_inheritance/pub/multiple_inheritance.md",
+    "kb/pub/multiple_inheritance/pub/Multiple Inheritance.md",
     "app/mroenfo.py",
     "kb/pub/multiple_inheritance/pub/super.md",
-    "kb/pub/multiple_inheritance/pub/Multiple Inheritance.md",
-    "kb/pub/multiple_inheritance/pub/MRO.md",
     "kb/mroenfo.py",
     "kb/mroenfo.oy",
     "kb/pub/multiple_inheritance/pub",
@@ -218,7 +203,6 @@
     "app/Enforcer.py",
     "app/source/assets/pub",
     "app/source/README.md",
-    "app/README.md",
     "app/src/source/README.md",
     "app/src/README.md",
     "kb/pub/assets/image.jpg",

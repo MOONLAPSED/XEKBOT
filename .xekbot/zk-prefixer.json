@@ -1,4 +1,5 @@
 {
-  "folder": "kb",
-  "template": "README"
+  "folder": "kb/pub",
+  "template": "README",
+  "format": "YYYYMMMDD"
 }
